@@ -1,21 +1,22 @@
 package me.venal.praxi.player;
 
 import me.venal.praxi.Praxi;
+import me.venal.praxi.enums.Status;
 
 import java.util.UUID;
 
 public class User implements IUser {
     
     private final Praxi instance;
+    private Status status;
     
     private UUID uuid;
-    private boolean isFighting, isSpectating;
     
-    public User(UUID uuid, Praxi instance) {
+     // Can be package private
+     User(UUID uuid, Praxi instance) {
         this.instance = instance;
         
         this.uuid = uuid;
-        
     }
     
     
@@ -23,22 +24,15 @@ public class User implements IUser {
     public UUID getUniqueID() {
         return this.uuid;
     }
+    
+    @Override
+    public void setStatus(Status status) {
+        this.status = status;
+    }
 
     @Override
-    public boolean isFighting() {
-        return this.isFighting;
+    public Status getStatus() {
+        return status;
     }
 
-    @Override
-    public boolean isSpectating() {
-        return this.isSpectating;
-    }
-
-    public void setSpectating(boolean spectating) {
-        this.isSpectating = spectating;
-    }
-
-    public void setFighting(boolean fighting) {
-        this.isFighting = fighting;
-    }
 }

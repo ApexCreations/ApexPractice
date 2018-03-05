@@ -3,6 +3,7 @@ package me.venal.praxi;
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
+import me.venal.praxi.player.UserHandler;
 
 public class PraxiModule extends AbstractModule {
 
@@ -15,6 +16,7 @@ public class PraxiModule extends AbstractModule {
     @Override
     protected void configure() {
         this.bind(Praxi.class).toInstance(praxi);
+        this.bind(UserHandler.class).toInstance(new UserHandler(praxi));
     }
 
      public Injector createInjector() {
