@@ -7,12 +7,9 @@ public class Praxi extends JavaPlugin {
     
     private UserHandler userHandler;
     
-    
     @Override
     public void onEnable() {
-        
         userHandler = new UserHandler(this);
-
     }
 
     @Override
