@@ -9,7 +9,7 @@ public interface IUser {
      /*
       * Gets a player's UUID
       * 
-      * return UUID
+      * @return UUID
       */
      
      UUID getUniqueID();

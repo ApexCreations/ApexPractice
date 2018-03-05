@@ -1,5 +1,6 @@
 package me.venal.praxi.player;
 
+import com.google.inject.Inject;
 import me.venal.praxi.Praxi;
 import me.venal.praxi.enums.Status;
 
@@ -7,7 +8,7 @@ import java.util.UUID;
 
 public class User implements IUser {
     
-    private final Praxi instance;
+    private @Inject final Praxi instance;
     private Status status;
     
     private UUID uuid;

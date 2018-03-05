@@ -16,7 +16,6 @@ public class JoinListener implements Listener {
     private @Inject UserHandler userHandler;
     
     public JoinListener() {
-        
         instance.getServer().getPluginManager().registerEvents(this, instance);
     }
     
