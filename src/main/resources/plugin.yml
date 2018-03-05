@@ -1,0 +1,5 @@
+name: Praxi
+version: ${project.version}
+main: me.venal.praxi.Praxi
+authors: [Venal]
+description: Practice plugin made with a 5 day deadline. 
